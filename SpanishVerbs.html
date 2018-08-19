@@ -28,13 +28,34 @@ td {
 th {
 	text-align: left;
 }
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
+.dropdown: hover .droplink 
+.dropdown-content a {
+	display: block;
+}
 </style>
 </head>
 <body>
 <div class = "sidenav">
 	<a href = "SpanishHome.html">Home</a></br>
 	<a href = "Conjugations.html">Conjugations</a></br>
-	<a href = "Vocab.html">Vocab</a></br>
+	<div class = "dropdown">
+		<a class = "droplink" href = "Vocab.html">Vocab</a></br>
+		<div class = "dropdown-content">
+			<a href = "SpanishNouns.html">Nouns</a>
+			<a href = "#">Verbs</a>
+		</div>
+	</div>
+	
+	<a href = "Key.html">Key to terms</a></br>
 </div>
 <div class = "main">
 	<h1>Spanish Verbs</h1>
