@@ -1,41 +1,21 @@
 <html>
 <head>
 <title>Conjugations</title>
-<style>
-.sidenav {
-	width: 130px;
-	position: fixed;
-	z-index: 1;
-	top: 20px;
-	left: 10px;
-	background: #eee;
-	overflow-x: hidden;
-	padding: 8px 0;
-}
-.main {
-	margin-left: 140px; /* Same width as the sidebar + left position in px */
-	font-size: 28px; /* Increased text to enable scrolling */
-	padding: 0px 10px;
-}
-table {
-	border-collapse: collapse;
-}
-td {
-	padding: 8px;
-    border: 1px solid #dddddd;
-	text-align: left;
-}
-th {
-	text-align: left;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="MyStyle.css">
 </head>
 <body>
-<div class = "sidenav">
-	<a href = "SpanishHome.html">Home</a></br>
-	<a href = "#">Conjugations</a></br>
-	<a href = "Vocab.html">Vocab</a></br>
-	<a href = "Key.html">Key to terms</a></br>
+<div class="sidenav">
+  <a href="SpanishHome.html">Home</a>
+  <a href="Conjugations.html">Conjugations</a>
+  <button class="dropdown-btn">Vocab
+    <!--<i class="fa fa-caret-down"></i>-->
+  </button>
+  <div class="dropdown-container">
+    <a href="SpanishVerbs.html" class="smallA">Verbs</a>
+    <a href="SpanishNouns.html" class="smallA">Nouns</a>
+    <a href="SpanishPhrases.html" class="smallA">Basic Phrases</a>
+  </div>
+  <a title="You are already here!">Key to terms</a>
 </div>
 <div class = "main">
 	<h1>Conjugations</h1>
@@ -73,11 +53,11 @@ th {
 			<td>They(masc.)/They(fem.)/Y'all(form.) do</td>
 		</tr>
 	</table>
-	<h4>Present tense</h4>
-	<!--<h5>Regular Conjugations</h5>-->
+	<button class="collapsible" title="Click to expand">Present tense - El Presente</button>
+	<div class="content">
 	<table>
 		<tr>
-			<th style="font-size:18px;">Regular Conjugations</th>
+			<th id="mini_table_head">Regular Conjugations</th>
 		</tr>
 		<tr>
 		<td>
@@ -91,7 +71,7 @@ th {
 				</tr>
 				<tr>
 					<td>-as</td>
-					<td>-a&iacute;s</td>
+					<td>-&aacute;is</td>
 				</tr>
 				<tr>
 					<td>-a</td>
@@ -110,7 +90,7 @@ th {
 				</tr>
 				<tr>
 					<td>-es</td>
-					<td>-e&iacute;s</td>
+					<td>-&eacute;is</td>
 				</tr>
 				<tr>
 					<td>-e</td>
@@ -139,25 +119,25 @@ th {
 		</td>
 		</tr>
 		<tr>
-			<th style="font-size:18px;">Examples</th>
+			<th id="mini_table_head">Examples</th>
 		</tr>
 		<tr>
 		<td>
 			<table style="width:100%">
 				<tr>
-					<th>Jugar - to play</th>
+					<th>Estudiar - to study</th>
 				</tr>
 				<tr>
-					<td>Jugo</td>
-					<td>Jugamos</td>
+					<td>Estudio</td>
+					<td>Estudiamos</td>
 				</tr>
 				<tr>
-					<td>Jugas</td>
-					<td>Juga&iacute;s</td>
+					<td>Estudias</td>
+					<td>Estudi&aacute;is</td>
 				</tr>
 				<tr>
-					<td>Juga</td>
-					<td>Jugan</td>
+					<td>Estudia</td>
+					<td>Estudian</td>
 				</tr>
 			</table>
 		</td>
@@ -172,7 +152,7 @@ th {
 				</tr>
 				<tr>
 					<td>Comes</td>
-					<td>Come&iacute;s</td>
+					<td>Com&eacute;is</td>
 				</tr>
 				<tr>
 					<td>Come</td>
@@ -201,6 +181,149 @@ th {
 		</td>
 		</tr>
 	</table>
+	</div>
+	<button class="collapsible" title="Click to expand">Preterite - El Pret&eacute;rito</button>
+	<div class="content">
+	<table>
+		<tr>
+			<th id="mini_table_head">Regular Conjugations</th>
+		</tr>
+		<tr>
+		<td>
+			<table>
+				<tr>
+					<th>"-ar" conjugations</th>
+				</tr>
+				<tr>
+					<td>-&eacute;</td>
+					<td>-amos</td>
+				</tr>
+				<tr>
+					<td>-aste</td>
+					<td>-asteis</td>
+				</tr>
+				<tr>
+					<td>-&oacute;</td>
+					<td>-aron</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table>
+				<tr>
+					<th>"-er/-ir" conjugations</th>
+				</tr>
+				<tr>
+					<td>-&iacute;</td>
+					<td>-imos</td>
+				</tr>
+				<tr>
+					<td>-iste</td>
+					<td>-isteis</td>
+				</tr>
+				<tr>
+					<td>-i&oacute;</td>
+					<td>-ieron</td>
+				</tr>
+			</table>
+		</td>
+		</tr>
+		<tr>
+			<th id="mini_table_head">Examples</th>
+		</tr>
+		<tr>
+		<td>
+			<table style="width:100%">
+				<tr>
+					<th>Estudiar - to study</th>
+				</tr>
+				<tr>
+					<td>Estudi&eacute;</td>
+					<td>Estudiamos</td>
+				</tr>
+				<tr>
+					<td>Estudiaste</td>
+					<td>Estudiasteis</td>
+				</tr>
+				<tr>
+					<td>Estudi&oacute;</td>
+					<td>Estudiaron</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table style="width:100%">
+				<tr>
+					<th>Comer - to eat</th>
+				</tr>
+				<tr>
+					<td>Com&iacute;</td>
+					<td>Comimos</td>
+				</tr>
+				<tr>
+					<td>Comiste</td>
+					<td>Comisteis</td>
+				</tr>
+				<tr>
+					<td>Comi&oacute;</td>
+					<td>Comieron</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table style="width:100%">
+				<tr>
+					<th>Vivir - to live</th>
+				</tr>
+				<tr>
+					<td>Viv&iacute;</td>
+					<td>Vivimos</td>
+				</tr>
+				<tr>
+					<td>Viviste</td>
+					<td>Vivisteis</td>
+				</tr>
+				<tr>
+					<td>Vivi&oacute;</td>
+					<td>Vivieron</td>
+				</tr>
+			</table>
+		</td>
+		</tr>
+	</table>
+	</div>
 </div>
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	
+	/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var dropdownContent = this.nextElementSibling;
+		if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		} else {
+		  dropdownContent.style.display = "block";
+		}
+	  });
+	}
+</script>
 </body>
 </html>

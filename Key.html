@@ -1,45 +1,25 @@
 <html>
 <head>
-<title>Spanish Phrases</title>
-<style>
-.sidenav {
-	width: 130px;
-	position: fixed;
-	z-index: 1;
-	top: 20px;
-	left: 10px;
-	background: #eee;
-	overflow-x: hidden;
-	padding: 8px 0;
-}
-.main {
-	margin-left: 140px; /* Same width as the sidebar + left position in px */
-	font-size: 28px; /* Increased text to enable scrolling */
-	padding: 0px 10px;
-}
-table {
-	border-collapse: collapse;
-}
-td {
-	padding: 8px;
-    border: 1px solid #dddddd;
-	text-align: left;
-}
-th {
-	text-align: left;
-}
-</style>
+<title>Key to Terms</title>
+<link rel="stylesheet" type="text/css" href="MyStyle.css">
 </head>
 <body>
-<div class = "sidenav">
-	<a href = "SpanishHome.html">Home</a></br>
-	<a href = "Conjugations.html">Conjugations</a></br>
-	<a href = "Vocab.html">Vocab</a></br>
-	<a href = "#">Key to terms</a></br>
+<div class="sidenav">
+  <a href="SpanishHome.html">Home</a>
+  <a href="Conjugations.html">Conjugations</a>
+  <button class="dropdown-btn">Vocab
+    <!--<i class="fa fa-caret-down"></i>-->
+  </button>
+  <div class="dropdown-container">
+    <a href="SpanishVerbs.html" class="smallA">Verbs</a>
+    <a href="SpanishNouns.html" class="smallA">Nouns</a>
+    <a href="SpanishPhrases.html" class="smallA">Basic Phrases</a>
+  </div>
+  <a title="You are already here!">Key to terms</a>
 </div>
 <div class = "main">
 	<h1>Spanish Phrases</h1>
-	<p>A list of nouns to memorize to be successful in Spanish 1 and 2</p>
+	<p>Some notation I used that may be confusing</p>
 	<p><strong>NOTE: </strong> this list is not necessarily exhaustive</p>
 	
 	<table>
@@ -56,5 +36,23 @@ th {
 	</table>
 	<p style = "font-size: 16px;">*Note: some sources will use (fam.) meaning "familiar" instead. Additionally, (inf.) in some contexts may mean "infinitive"</p>
 </div>
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+/*pretty sure it lowkey doesn't do anything right now*/
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>
