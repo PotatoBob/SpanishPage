@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Countries Maps</title>
+<link rel="stylesheet" type="text/css" href="MyStyle.css">
+</head>
+<body>
+<div class="sidenav">
+  <a href="SpanishHome.html">Home</a>
+  <a href="Conjugations.html">Conjugations</a>
+  <button class="dropdown-btn">Countries
+    <!--<i class="fa fa-caret-down"></i>-->
+  </button>
+  <div class="dropdown-container">
+    <a href="CountriesVideos.html" class="smallA">Videos</a>
+    <a title="You are already here!" class="smallA">Map</a>
+  </div>
+  <button class="dropdown-btn">Vocab
+    <!--<i class="fa fa-caret-down"></i>-->
+  </button>
+  <div class="dropdown-container">
+    <a href="SpanishNouns.html" class="smallA">Nouns</a>
+    <a href="SpanishVerbs.html" class="smallA">Verbs</a>
+    <a href="SpanishPhrases.html" class="smallA">Basic Phrases</a>
+  </div>
+  <a href="Key.html">Key to terms</a>
+</div>
+<div class = "main">
+	<h1>Latin American Countries and Capitals Map</h1>
+	<p>These are interactive maps of the countries and capitals of South and Central America. When you move your mouse over a country, the text next to it will display the country name and its capital. You can use this as a quiz to help you study.</p>
+	<h3>Interactive maps</h3>
+	<table style="width:100%;">
+		<tr>
+			<th>Central America (WIP)</th>
+		</tr>
+		<tr>
+			<td>
+				<img src="CentralAmericaMap.gif"> 
+			</td><!--central america map location-->
+			<td id="centralLabel" style="width:50%;">Country:</br>Capital:</td><!--location of country/capital text-->
+		</tr>
+		<tr>
+			<th>South America</th>
+		</tr>
+		<tr>
+			<td>
+				<img src="SouthAmericaMap.jpg" usemap="#SouthAmerica"/>
+				<!--<p>Country</br>Capital</p>-->
+				<map name="SouthAmerica" id="SouthAmerica">
+					<area alt="Brazil" reg="Brazil" shape="poly" coords="365,353,338,331,359,306,355,284,329,264,328,256,330,242,308,214,306,209,280,202,277,191,277,185,252,194,225,172,229,158,245,144,251,129,248,112,262,110,276,120,288,112,288,96,307,91,312,94,311,108,322,117,340,107,348,108,358,109,373,91,379,113,379,122,390,125,411,133,425,140,443,142,445,141,455,148,466,156,472,155,476,153,481,175,455,206,450,241,436,273,408,280,389,295,390,318" 
+					onmouseover="displaySouth('Brasil','Bras&iacute;lia');" onmouseout="hideSouth();"/>
+					<area alt="Bolivia" reg="Bolivia" shape="poly" coords="275,185,260,193,251,193,254,204,251,227,254,230,250,241,256,252,253,260,260,277,266,277,272,269,278,273,282,275,287,270,294,271,300,254,313,252,318,252,325,255,329,244,323,237,324,233,313,230,310,216,304,212,299,212,289,205,285,205,278,201,275,193" 
+					onmouseover="displaySouth('Bolivia','La Paz');" onmouseout="hideSouth();"/>
+					<area alt="Paraguay" reg="Paraguay" shape="poly" coords="325,271,325,266,327,263,324,258,326,256,318,251,301,254,297,260,297,265,294,271,298,276,304,282,307,285,312,285,319,290,324,292,327,294,329,295,328,297,324,302,325,304,323,306,320,310,334,310,334,311,337,309,340,310,341,307,347,303,347,296,348,294,349,290,349,285,347,283,343,285,342,282,341,274,336,271" 
+					onmouseover="displaySouth('Paraguay','Asunci&oacute;n');" onmouseout="hideSouth();"/>
+					<area alt="Uruguay" reg="Uruguay" shape="poly" coords="345,368,351,366,355,360,354,356,358,352,355,349,353,345,350,344,348,341,344,340,341,336,339,338,337,334,333,331,330,332,328,333,326,338,324,346,326,352,323,354,322,361,326,365,337,369,346,369" 
+					onmouseover="displaySouth('Uruguay','Montevideo');" onmouseout="hideSouth();"/>
+					<area alt="Argentina" reg="Argentina" shape="poly" coords="347,297,351,296,355,301,354,308,347,312,340,318,328,332,325,344,325,353,323,355,322,364,331,372,330,376,334,380,335,385,328,396,322,399,313,402,303,404,298,403,298,417,288,422,279,418,277,421,279,424,279,430,287,430,289,435,286,437,279,442,276,452,276,457,271,458,265,460,263,469,269,475,274,476,275,482,274,487,262,497,261,507,254,511,253,520,257,531,266,549,276,557,287,557,287,561,269,563,263,560,255,560,254,533,251,531,248,529,232,525,230,513,225,514,222,499,226,496,231,489,230,486,230,480,234,474,233,468,236,460,235,456,234,448,233,440,231,435,234,424,234,412,236,403,240,400,238,392,238,384,243,379,242,372,246,363,246,355,241,341,244,333,247,334,245,326,247,321,249,314,253,308,257,306,255,303,255,291,257,289,262,286,265,276,268,270,272,270,281,272,282,277,286,272,288,271,292,271,296,274,298,278,303,285,309,286,312,287,318,290,327,294,325,303,321,310,334,312,338,309,343,309" 
+					onmouseover="displaySouth('Argentina','Buenos Aires');" onmouseout="hideSouth();"/>
+					<area alt="Chile" reg="Chile" shape="poly" coords="248,239,243,245,244,256,243,276,241,284,240,303,233,323,233,338,235,351,220,388,221,393,222,399,223,405,218,422,215,440,212,457,214,463,206,471,207,477,208,490,211,519,213,535,218,544,225,553,236,560,251,569,265,572,269,563,263,559,254,559,255,537,249,529,233,527,230,523,229,512,225,513,221,506,222,500,228,494,228,486,231,479,234,472,232,464,235,460,230,456,233,452,231,440,230,431,233,420,234,407,235,407,235,403,240,400,236,390,238,383,241,379,242,375,240,372,245,363,245,355,240,341,246,332,244,323,253,307,255,301,254,293,256,289,262,287,265,278,259,276,257,269,253,260,255,255,252,251" 
+					onmouseover="displaySouth('Chile','Santiago');" onmouseout="hideSouth();"/>
+					<area alt="Peru" reg="Peru" shape="poly" coords="245,149,241,144,245,139,239,135,234,134,230,136,226,136,225,133,221,129,218,126,216,123,212,121,209,121,210,125,209,132,206,135,200,139,194,141,191,144,189,152,185,154,184,154,181,151,176,150,175,148,177,145,177,143,170,151,170,154,173,159,170,161,179,164,183,172,188,179,190,187,196,197,200,204,204,211,202,215,207,221,213,226,219,230,228,233,234,238,240,243,244,245,247,244,248,241,253,232,249,227,250,224,249,221,254,217,252,213,253,207,256,205,248,194,243,194,241,192,242,185,236,187,232,187,230,183,225,183,226,181,220,172,221,170,220,166,224,165,224,161,226,160,226,155,232,151,238,151,241,149" 
+					onmouseover="displaySouth('Peru','Lima');" onmouseout="hideSouth();"/>
+					<area alt="Ecuador" reg="Ecuador" shape="poly" coords="204,117,211,125,209,127,208,132,203,138,193,141,190,144,188,151,185,154,182,153,182,150,176,149,177,146,177,143,177,139,172,137,172,127,178,119,178,116,186,111,193,115,195,115,196,117,202,119" 
+					onmouseover="displaySouth('Ecuador','Quito');" onmouseout="hideSouth();"/>
+					<area alt="Colombia" reg="Colombia" shape="poly" coords="246,148,241,146,245,139,240,135,234,136,226,137,224,132,218,127,215,122,210,120,208,121,204,117,202,119,197,118,195,115,191,114,186,109,189,109,188,106,192,104,198,96,196,93,196,83,197,76,192,72,197,67,196,63,201,66,200,62,206,57,209,49,214,45,216,50,219,45,224,44,234,37,235,37,238,40,236,41,232,42,231,45,229,46,226,50,225,55,223,58,228,58,227,63,230,66,229,71,232,75,241,73,245,74,249,79,262,79,263,80,260,83,260,90,262,95,264,98,259,102,264,103,261,108,257,108,248,108,247,113,251,114,251,117,246,116,245,120,248,125,250,128" 
+					onmouseover="displaySouth('Colombia','Bogot&aacute;');" onmouseout="hideSouth();"/>
+					<area alt="Venezuela" reg="Venezuela" shape="poly" coords="304,62,308,58,302,54,296,54,294,49,285,48,281,51,278,52,272,48,258,49,256,44,248,42,246,38,243,39,244,43,236,47,232,43,225,57,229,64,230,70,233,73,242,75,247,75,250,80,262,79,261,83,260,91,264,98,260,102,265,104,266,112,271,115,275,114,283,110,285,108,290,105,285,103,283,97,280,94,283,91,285,93,291,95,293,97,293,93,296,92,299,93,308,89,307,85,302,81,303,76,309,74,306,70,313,65,310,63" 
+					onmouseover="displaySouth('Venezuela','Caracas');" onmouseout="hideSouth();"/>
+				</map>
+			</td><!--south america map location-->
+			<td id="southLabel" style="width:50%;">Country</br>Capital</td><!--location of country/capital text-->
+		</tr>
+	</table>
+</div>
+<script>
+	/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var dropdownContent = this.nextElementSibling;
+		if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		} else {
+		  dropdownContent.style.display = "block";
+		}
+	  });
+	}
+	
+	function displaySouth(country, capital) {
+		document.getElementById("southLabel").innerHTML="Country: "+country+"</br>Capital: "+capital;
+	}
+	function hideSouth() {
+		document.getElementById("southLabel").innerHTML="Country:</br>Capital:";
+	}
+	function displayCentral(country, capital) {
+		document.getElementById("centralLabel").innerHTML="Country: "+country+"</br>Capital: "+capital;
+	}
+</script>
+</body>
+</html>
