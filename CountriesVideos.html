@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Countries Videos</title>
+<link rel="stylesheet" type="text/css" href="MyStyle.css">
+</head>
+<body>
+<div class="sidenav">
+  <a href="SpanishHome.html">Home</a>
+  <a href="Conjugations.html">Conjugations</a>
+  <button class="dropdown-btn">Countries
+    <!--<i class="fa fa-caret-down"></i>-->
+  </button>
+  <div class="dropdown-container">
+    <a title="You are already here!" class="smallA">Videos</a>
+    <a href="CountriesMap.html" class="smallA">Map</a>
+  </div>
+  <button class="dropdown-btn">Vocab
+    <!--<i class="fa fa-caret-down"></i>-->
+  </button>
+  <div class="dropdown-container">
+    <a href="SpanishNouns.html" class="smallA">Nouns</a>
+    <a href="SpanishVerbs.html" class="smallA">Verbs</a>
+    <a href="SpanishPhrases.html" class="smallA">Basic Phrases</a>
+  </div>
+  <a href="Key.html">Key to terms</a>
+</div>
+<div class = "main">
+	<h1>Latin American Countries and Capitals Videos</h1>
+	<p>These are the countries and capitals that will be tested in the beginning of Spanish 1 and possibly 2. Watch and rewatch the videos as necessary.</p>
+	<h3>Rock the Countries Videos</h3>
+	<table style="width:100%;">
+		<tr>
+			<th>Central America</th>
+			<th>South America</th>
+		</tr>
+		<tr>
+			<td style="border:0px;"><iframe width="560" height="315" src="https://www.youtube.com/embed/fAupLjNTae0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+			<td style="border:0px;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Nw1H8aIhKNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+		</tr>
+	</table>
+</div>
+<script>
+	/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var dropdownContent = this.nextElementSibling;
+		if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		} else {
+		  dropdownContent.style.display = "block";
+		}
+	  });
+	}
+</script>
+</body>
+</html>
